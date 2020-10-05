@@ -1,0 +1,37 @@
+1) It is best practice to run Python from a virtual environment rather than the local Python installation.
+
+To set up a virtual environment in VSCode, enter the following code in a new Terminal:
+
+# Create the new venv
+> py -m venv <path to new venv>
+
+# Activate the venv
+> <path to new venv>\Scripts\Activate
+
+For example, one could create a the venv .trading_strategies_venv within their user directory:
+
+> py -m venv .trading_strategies_venv
+> .\.trading_strategies_venv\Scripts\Activate
+
+There are many benefits to using virtual environments. One benefit is that by saving the virtual environment
+to say MyDocuments, we can download and install packages without opening VSCode, or our IDE of choice, in
+Administrator mode. 
+
+
+2) Having created a new venv, we will likely need to install some packages such as pandas etc.
+
+> pip install pandas
+
+Within the virtual environment we do not need to add the "py -m" suffix anymore.
+
+
+3) The last step is to update the PYTHONPATH such that the Python interpreter can find local modules that
+are defined in directories different to the source file. The easiest way to do this is by using the 
+vitualenvwrapper-win package.
+
+> pip install vitualenvwrapper-win
+
+To add the repo path we do:
+
+> add2virtualenv C:\Users\anjis\Source\Repos\TradingStrategies
+

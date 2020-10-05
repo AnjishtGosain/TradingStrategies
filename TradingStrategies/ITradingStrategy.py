@@ -1,5 +1,6 @@
 from abc import ABCMeta, abstractmethod
 
+
 class ITradingStrategy(object):
     """Strategy is an abstract base class providing an interface for
     all subsequent (inherited) trading strategies.
@@ -16,6 +17,3 @@ class ITradingStrategy(object):
         """An implementation is required to return the DataFrame of symbols 
         containing the signals to go long, short or hold (1, -1 or 0)."""
         raise NotImplementedError("Should implement generate_signals()!")
-
-
-
